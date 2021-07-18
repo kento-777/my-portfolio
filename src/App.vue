@@ -1,29 +1,27 @@
 <template>
-  <div>
-    <LikeHeader></LikeHeader>
-    <h2>{{ number }}</h2>
-    <LikeNumber :total-number="number" @my-click="number = $event"></LikeNumber>
-    <LikeNumber :total-number="number"></LikeNumber>
+  <div id="app">
+    <h1>じゃんけんゲーム</h1>
+    <div class="innner">
+      <game scores="scores"></game>
+      <score scores="scores"></score>
+    </div>
   </div>
 </template>
 
 <script>
-import LikeHeader from "./compornents/LikeHeader.vue";
-
+import Game from './compornents/Game.vue';
+import Score from "./compornents/Score.vue";
+import Storage from './util/Storage.js';
+let storage = new Storage();
 export default {
+  name: 'app',
   data() {
     return {
-      number: 10,
-    };
-  },
-  components: {
-    LikeHeader: LikeHeader,
-  },
+      scores: storage.getData('scores')
+    }
+  }
 };
 </script>
 
-<style scoped>
-div {
-  border: 1px solid blue;
-}
+<style>
 </style>
