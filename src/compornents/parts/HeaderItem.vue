@@ -2,7 +2,6 @@
   <div>
     <header>
       <div class="header__wrapper">
-        <div class="header__logo"><a href="#"></a></div>
         <div id="humberger--js" class="header__humberger">
           <span id="bar-top--js" class="header__bar header__bar-top"></span>
           <span
@@ -76,7 +75,7 @@ header {
   &__wrapper {
     display: flex;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin: 22px 40px;
   }
 

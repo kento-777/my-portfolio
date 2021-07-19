@@ -1,14 +1,11 @@
 <template>
   <div>
-    <header-item></header-item>
-    <h1>Works</h1>
+    <headerItem></headerItem>
   </div>
 </template>
 
 <script>
-import headerItem from './parts/headerItem.vue';
-export default {
-  components: { headerItem },};
+export default {};
 </script>
 
 <style></style>

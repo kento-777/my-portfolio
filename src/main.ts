@@ -1,10 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import HeaderItem from "./compornents/parts/HeaderItem.vue"
+import headerItem from "./compornents/parts/headerItem.vue";
 
 Vue.config.productionTip = false;
-Vue.component('HeaderItem', HeaderItem)
+Vue.component('headerItem', headerItem);
 new Vue({
   el: "#app",
   router,
