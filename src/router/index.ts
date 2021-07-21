@@ -1,9 +1,10 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Top from "../compornents/Top.vue";
-import Skills from "../compornents/Skills.vue";
-import About from "../compornents/About.vue";
-import Works from "../compornents/Works.vue";
+import Top from "../components/Top.vue";
+import Skills from "../components/Skills.vue";
+import About from "../components/About.vue";
+import Works from "../components/Works.vue";
+import Contact from "../components/Contact.vue";
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,10 @@ const routes: Array<RouteConfig> = [
   {
     path: "/works",
     component: Works,
+  },
+  {
+    path: "/contact",
+    component: Contact,
   },
 ];
 
