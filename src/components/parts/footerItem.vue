@@ -4,8 +4,7 @@
 
 <style lang="scss" scoped>
   p {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    text-align: right;
+    font-size: .5rem;
   }
 </style>
