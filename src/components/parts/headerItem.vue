@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <slide>
+  <slide right>
     <a id="home" href="#">
       <span>Top</span>
     </a>
@@ -13,7 +13,7 @@
     <a id="skills" href="#">
       <span>Skills</span>
     </a>
-    <a id="Contact" href="#">
+    <a id="contact" href="#">
       <span>Contact</span>
     </a>
   </slide>

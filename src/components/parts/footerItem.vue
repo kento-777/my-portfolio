@@ -3,8 +3,8 @@
 </template>
 
 <style lang="scss" scoped>
-  p {
-    text-align: right;
-    font-size: .5rem;
-  }
+p {
+  text-align: right;
+  font-size: 0.5rem;
+}
 </style>

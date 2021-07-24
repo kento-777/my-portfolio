@@ -4,14 +4,14 @@
       <header><headerItem></headerItem></header>
       <main>
         <div class="main-wrap">
-          <div class="top-wrap">
+          <div class="main__top-wrap">
             <h1>Kento Tsuchida</h1>
             <p>
               This guy is a frontend enginner.<br />
               This guy makes you happy through enginnering.
             </p>
           </div>
-          <div class="menu-wrap">
+          <div class="main__menu-wrap">
             <ul>
               <li><a href="#">About</a></li>
               <li><a href="#">Works</a></li>
@@ -44,18 +44,37 @@ a {
 
 <style lang="scss" scoped>
 .wrap {
-  padding: 0 30px;
+  padding: 40px 30px;
 }
 
-.top-wrap {
-  padding-top: 3rem;
-  text-align: center;
-  h1 {
-    font-size: 4rem;
+.main {
+  &__top {
+    &-wrap {
+      padding-top: 3rem;
+      text-align: center;
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.3rem;
+        margin: 0 auto;
+      }
+    }
   }
-  p {
-    font-size: 1.3rem;
-    margin: 0 auto;
+  &__menu {
+    &-wrap {
+      padding: 50px 0 20px 0;
+      a {
+        font-size: 5rem;
+        display: inline-block;
+        color: #ffffff;
+        font-size: 36pt;
+        letter-spacing: 4px;
+        text-shadow: 2px 2px 1px #000000, -2px 2px 1px #000000,
+          2px -2px 1px #000000, -2px -2px 1px #000000, 2px 0px 1px #000000,
+          0px 2px 1px #000000, -2px 0px 1px #000000, 0px -2px 1px #000000;
+      }
+    }
   }
 }
 </style>
