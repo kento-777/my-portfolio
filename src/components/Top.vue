@@ -45,7 +45,6 @@
             <div class="instagram"><i class="fab fa-instagram"></i></div>
           </div>
         </div>
-        
       </main>
       <footer><footerItem></footerItem></footer>
     </div>
