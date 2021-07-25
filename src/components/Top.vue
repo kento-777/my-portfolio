@@ -13,13 +13,39 @@
           </div>
           <div class="main__menu-wrap">
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Works</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">Contact</a></li>
+              <li>
+                <router-link id="top" to="/">
+                  Top
+                </router-link>
+              </li>
+              <li>
+                <router-link id="about" to="/about">
+                  About
+                </router-link>
+              </li>
+              <li>
+                <router-link id="works" to="/works">
+                  Works
+                </router-link>
+              </li>
+              <li>
+                <router-link id="skills" to="/skills">
+                  Skills
+                </router-link>
+              </li>
+              <li>
+                <router-link id="contact" to="/contact">
+                  Contact
+                </router-link>
+              </li>
             </ul>
           </div>
+          <div class="icon">
+            <div class="twitter"><i class="fab fa-twitter-square"></i></div>
+            <div class="instagram"><i class="fab fa-instagram"></i></div>
+          </div>
         </div>
+        
       </main>
       <footer><footerItem></footerItem></footer>
     </div>

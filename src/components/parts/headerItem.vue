@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-  <slide right>
-    <a id="home" href="#">
+  <slide right isOpen>
+    <router-link id="top" to="/">
       <span>Top</span>
-    </a>
-    <a id="about" href="#">
+    </router-link>
+    <router-link id="about" to="/about">
       <span>About</span>
-    </a>
-    <a id="works" href="#">
+    </router-link>
+    <router-link id="works" to="/works">
       <span>Works</span>
-    </a>
-    <a id="skills" href="#">
+    </router-link>
+    <router-link id="skills" to="/skills">
       <span>Skills</span>
-    </a>
-    <a id="contact" href="#">
+    </router-link>
+    <router-link id="contact" to="/contact">
       <span>Contact</span>
-    </a>
+    </router-link>
   </slide>
   <div id="page-wrap"></div>
 </div>
