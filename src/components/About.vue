@@ -85,11 +85,11 @@ h3 {
 dl {
   display: flex;
   flex-wrap: wrap;
- 
+
   dt {
-    text-align: right;
+    text-align: left;
     width: 5%;
-    padding: 0.5em 1em 0.5em 0.5em;
+    padding-top: 0.5em;
     position: relative;
     &::after {
       content: "●";
@@ -101,10 +101,10 @@ dl {
     }
   }
   dd {
-    width: 80%;
-    padding: 0.5em 2em 3em;
+    width: 85%;
+    padding: 0.5em 0 3em 2em;
     border-left: 2px solid #ccc;
-    
+
     h3 {
       font-size: 22px;
       margin: 0 0 5px;
