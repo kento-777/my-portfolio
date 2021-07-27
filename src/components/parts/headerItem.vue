@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <slide right isOpen>
+    <slide right noOverlay>
       <router-link id="top" to="/">
         <span>Top</span>
       </router-link>

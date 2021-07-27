@@ -41,8 +41,12 @@
             </ul>
           </div>
           <div class="icon">
-            <div class="twitter"><i class="fab fa-twitter-square"></i></div>
-            <div class="instagram"><i class="fab fa-instagram"></i></div>
+            <a class="icon__twitter" href="#"
+              ><i class="fab fa-twitter-square fa-3x"></i
+            ></a>
+            <a class="icon__instagram" href="#"
+              ><i class="fab fa-instagram fa-3x"></i
+            ></a>
           </div>
         </div>
       </main>
@@ -56,6 +60,14 @@ export default {};
 </script>
 
 <style lang="scss">
+body {
+  background-color: rgb(255, 255, 255);
+}
+.wrap {
+  padding: 0 30px;
+  font-family: "Consolas";
+}
+
 ul {
   padding-left: 0;
 }
@@ -68,10 +80,6 @@ a {
 </style>
 
 <style lang="scss" scoped>
-.wrap {
-  padding: 40px 30px;
-}
-
 .main {
   &__top {
     &-wrap {
@@ -90,6 +98,7 @@ a {
     &-wrap {
       padding: 50px 0 20px 0;
       a {
+        padding: 15px 0;
         font-size: 5rem;
         display: inline-block;
         color: #ffffff;
@@ -100,6 +109,17 @@ a {
           0px 2px 1px #000000, -2px 0px 1px #000000, 0px -2px 1px #000000;
       }
     }
+  }
+}
+
+.icon {
+  display: flex;
+  &__twitter {
+    padding-right: 2em;
+    color: black;
+  }
+  &__instagram {
+    color: black;
   }
 }
 </style>

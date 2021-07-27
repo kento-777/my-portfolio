@@ -1,11 +1,13 @@
 <template>
   <div>
-    <header><headerItem></headerItem></header>
-    <main>
-      <div class="wrap">
+    <div class="wrap">
+      <header><headerItem></headerItem></header>
+      <main>
         <div class="title"><h1>About</h1></div>
         <div class="profile">
-          <div class="profile__img"><img src="" alt="" /></div>
+          <div class="profile__img">
+            <img src="IMG_2875.JPG" alt="my-image" />
+          </div>
           <div class="profile__explain">
             <p>
               土田健斗　Kento Tsuchida(21) <br /><br />
@@ -46,8 +48,9 @@
             <dd>
               <h3><b>プログラミングと初対面、そして…</b></h3>
               <p>
-                高校時代の友達と再会し、それをきっかけとして
-                再度、本格的にプログラミングと向き合う。
+                プログラミングと出会う。
+                最初はYouTubeなどを見て学習を続けるも、分からないことが
+                とても多く、挫折…
               </p>
             </dd>
             <dt>2021.4</dt>
@@ -67,9 +70,9 @@
             <dd><h3>Study more...</h3></dd>
           </dl>
         </div>
-      </div>
-    </main>
-    <footer><footerItem></footerItem></footer>
+      </main>
+      <footer><footerItem></footerItem></footer>
+    </div>
   </div>
 </template>
 <script>
@@ -77,11 +80,37 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  font-size: 50px;
+}
 h3 {
   font-weight: normal;
   margin-bottom: 0;
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__img {
+    width: 50%;
+    text-align: center;
+
+    img {
+      width: 50%;
+      border-radius: 50%;
+    }
+  }
+
+  &__explain {
+    width: 50%;
+  }
+}
+
+.story__wrap {
+  align-items: center;
+}
 dl {
   display: flex;
   flex-wrap: wrap;
@@ -94,9 +123,9 @@ dl {
     &::after {
       content: "●";
       position: absolute;
-      right: -2.35em;
-      top: 5px;
-      font-size: 22px;
+      right: -1.63em;
+      top: 2px;
+      font-size: 30px;
       color: black;
     }
   }
