@@ -80,9 +80,6 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  font-size: 50px;
-}
 h3 {
   font-weight: normal;
   margin-bottom: 0;

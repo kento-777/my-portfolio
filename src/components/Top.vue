@@ -77,6 +77,9 @@ li {
 a {
   text-decoration: none;
 }
+h1 {
+  font-size: 50px;
+}
 </style>
 
 <style lang="scss" scoped>
