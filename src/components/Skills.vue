@@ -14,10 +14,10 @@
               <div class="content__bar--outside">
                 <div class="content__bar--inside"></div>
               </div>
-              <div class="content__percent"><p>90％</p></div>
+              <div class="content__percent"><p>90%</p></div>
               <div class="content__explain">
                 <p>
-                  レスポンシブも含めた、HTMLとCSSの基本的なコーディングは問題ありません。<br />
+                  レスポンシブも含めた、HTMLとCSSの基本的なコーディングは問題ありません。
                   BEMも使用経験あり。
                 </p>
               </div>
