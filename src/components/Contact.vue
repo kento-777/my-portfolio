@@ -125,7 +125,7 @@ export default {
         params.append('namearea', this.nameareea);
         params.append('mailarea', this.mailarea);
         params.append('textboxarea', this.namearea);
-        axios.post('./functions/mail.php', params)
+        axios.post('../functions/mail.php', params)
         .then(function (response) {
           alert(responce.data)
           document.location = "/";

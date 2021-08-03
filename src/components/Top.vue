@@ -23,35 +23,54 @@
           </div>
           <div class="main__menu-wrap">
             <ul>
-              <li v-on:mouseover="overTop" v-on:mouseleave="mouseLeaveAction">
+              <li>
                 <router-link id="top" to="/">
-                  Top
+                  <h2
+                    v-on:mouseover="overTop"
+                    v-on:mouseleave="mouseLeaveAction"
+                  >
+                    Top
+                  </h2>
                 </router-link>
               </li>
-              <li v-on:mouseover="overAbout" v-on:mouseleave="mouseLeaveAction">
+              <li>
                 <router-link id="about" to="/about">
-                  About
+                  <h2
+                    v-on:mouseover="overAbout"
+                    v-on:mouseleave="mouseLeaveAction"
+                  >
+                    About
+                  </h2>
                 </router-link>
               </li>
-              <li v-on:mouseover="overWorks" v-on:mouseleave="mouseLeaveAction">
+              <li>
                 <router-link id="works" to="/works">
-                  Works
+                  <h2
+                    v-on:mouseover="overWorks"
+                    v-on:mouseleave="mouseLeaveAction"
+                  >
+                    Works
+                  </h2>
                 </router-link>
               </li>
-              <li
-                v-on:mouseover="overSkills"
-                v-on:mouseleave="mouseLeaveAction"
-              >
+              <li>
                 <router-link id="skills" to="/skills">
-                  Skills
+                  <h2
+                    v-on:mouseover="overSkills"
+                    v-on:mouseleave="mouseLeaveAction"
+                  >
+                    Skills
+                  </h2>
                 </router-link>
               </li>
-              <li
-                v-on:mouseover="overContact"
-                v-on:mouseleave="mouseLeaveAction"
-              >
+              <li>
                 <router-link id="contact" to="/contact">
-                  Contact
+                  <h2
+                    v-on:mouseover="overContact"
+                    v-on:mouseleave="mouseLeaveAction"
+                  >
+                    Contact
+                  </h2>
                 </router-link>
               </li>
             </ul>
@@ -85,12 +104,12 @@ export default {
   },
   methods: {
     reset() {
-        this.neverHover = false
-        this.hoverTop = false
-        this.hoverAbout = false
-        this.hoverWorks = false
-        this.hoverSkills = false
-       this.hoverContact = false
+      this.neverHover = false;
+      this.hoverTop = false;
+      this.hoverAbout = false;
+      this.hoverWorks = false;
+      this.hoverSkills = false;
+      this.hoverContact = false;
     },
     overTop() {
       this.reset();
@@ -161,7 +180,8 @@ h1 {
   &__menu {
     &-wrap {
       padding: 50px 0 20px 0;
-      a {
+      h2 {
+        margin: 0;
         padding: 15px 0;
         font-size: 5rem;
         display: inline-block;
@@ -189,26 +209,26 @@ h1 {
 
 .nomal {
   background-color: #fff;
-  transition: .5s;
+  transition: 0.3s;
 }
 .top {
   background-color: red;
-  transition: .5s;
+  transition: 0.3s;
 }
 .about {
   background-color: green;
-  transition: .5s;
+  transition: 0.3s;
 }
 .works {
   background-color: blue;
-  transition: .5s;
+  transition: 0.3s;
 }
 .skills {
   background-color: yellow;
-  transition: .5s;
+  transition: 0.3s;
 }
 .contact {
   background-color: purple;
-  transition: .5s;
+  transition: 0.3s;
 }
 </style>

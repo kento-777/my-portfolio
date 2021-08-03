@@ -104,7 +104,6 @@ export default {
             "このポートフォリオはVueを用いて完成させました。そのためVueの基本的操作やファイル構成についてはある程度理解しています。",
         },
         {
-          number: 8,
           img: "a",
           alt: "a",
           title: "TypeScript",

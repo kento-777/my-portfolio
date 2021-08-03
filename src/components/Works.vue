@@ -5,20 +5,13 @@
       <main>
         <div class="title"><h1>Works</h1></div>
         <div class="work">
-          <div class="work__item1">
-            <img src="" alt="" />
-            <p class="explain">
-              WordPlessを用いて、SANGOを基礎とした独自テーマを制作し、自分のチームのオリジナルブログサイトを完成させました。<br />
-              知識０からでもストレスなく学べるロードマップを随時更新しています。ただロードマップを提示するだけでなく、「ともにロードマップを走ってあげる」ことをモットーとして運営しています。
+          <div v-for="item in items" :key="item.id" class="work__item">
+            <img :src="item.src" :alt="item.alt" />
+            <p class="work__explain">
+              {{ item.explain1 }}<br />
+              {{ item.explain2 }}
             </p>
-            <a href="https://clenzymap.clenzy.net/" class="url"
-              >CLENZY MAP | あなたと旅するITメディア</a
-            >
-          </div>
-          <div class="work__item2">
-            <img src="" alt="" />
-            <p class="explain">説明説明</p>
-            <a href="" class="url">urlurl</a>
+            <a :href="item.href" class="work__url">{{ item.urlTitle }}</a>
           </div>
         </div>
       </main>
@@ -27,5 +20,43 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      items: [
+        {
+          id: 1,
+          src: "Clenzymap-logo.png",
+          alt: "a",
+          explain1:
+            "WordPlessを用いて、SANGOを基礎とした独自テーマを制作し、自分のチームのオリジナルブログサイトを完成させました。",
+          explain2:
+            "知識０からでもストレスなく学べるロードマップを随時更新しています。ただロードマップを提示するだけでなく、「ともにロードマップを走ってあげる」ことをモットーとして運営しています。",
+          href: "https://clenzymap.clenzy.net/",
+          urlTitle: "CLENZY MAP | あなたと旅するITメディア",
+        },
+      ],
+    };
+  },
+};
 </script>
+
+<style lang="scss" scoped>
+.work {
+  box-shadow:  0 5px 10px 0 rgba(0, 0, 0, .5);
+  &__item {
+    img {
+      width: 100%;
+    }
+  }
+  &__explain {
+    font-size: 1.3em;
+    line-height: 2em;
+    padding: 1.5em;
+  }
+  &__url {
+    font-size: 1.3em;
+    padding: 0 1.5em;
+  }
+}
+</style>
