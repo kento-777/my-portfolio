@@ -1,6 +1,16 @@
 <template>
   <div>
-    <div class="wrap">
+    <div
+      class="wrap"
+      :class="{
+        nomal: neverHover,
+        top: hoverTop,
+        about: hoverAbout,
+        works: hoverWorks,
+        skills: hoverSkills,
+        contact: hoverContact,
+      }"
+    >
       <header><headerItem></headerItem></header>
       <main>
         <div class="main-wrap">
@@ -13,27 +23,33 @@
           </div>
           <div class="main__menu-wrap">
             <ul>
-              <li>
+              <li v-on:mouseover="overTop" v-on:mouseleave="mouseLeaveAction">
                 <router-link id="top" to="/">
                   Top
                 </router-link>
               </li>
-              <li>
+              <li v-on:mouseover="overAbout" v-on:mouseleave="mouseLeaveAction">
                 <router-link id="about" to="/about">
                   About
                 </router-link>
               </li>
-              <li>
+              <li v-on:mouseover="overWorks" v-on:mouseleave="mouseLeaveAction">
                 <router-link id="works" to="/works">
                   Works
                 </router-link>
               </li>
-              <li>
+              <li
+                v-on:mouseover="overSkills"
+                v-on:mouseleave="mouseLeaveAction"
+              >
                 <router-link id="skills" to="/skills">
                   Skills
                 </router-link>
               </li>
-              <li>
+              <li
+                v-on:mouseover="overContact"
+                v-on:mouseleave="mouseLeaveAction"
+              >
                 <router-link id="contact" to="/contact">
                   Contact
                 </router-link>
@@ -56,7 +72,52 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      neverHover: true,
+      hoverTop: false,
+      hoverAbout: false,
+      hoverWorks: false,
+      hoverSkills: false,
+      hoverContact: false,
+    };
+  },
+  methods: {
+    reset() {
+        this.neverHover = false
+        this.hoverTop = false
+        this.hoverAbout = false
+        this.hoverWorks = false
+        this.hoverSkills = false
+       this.hoverContact = false
+    },
+    overTop() {
+      this.reset();
+      this.hoverTop = true;
+    },
+    overAbout() {
+      this.reset();
+      this.hoverAbout = true;
+    },
+    overWorks() {
+      this.reset();
+      this.hoverWorks = true;
+    },
+    overSkills() {
+      this.reset();
+      this.hoverSkills = true;
+    },
+    overContact() {
+      this.reset();
+      this.hoverContact = true;
+    },
+    mouseLeaveAction() {
+      this.reset();
+      this.neverHover = true;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -124,5 +185,30 @@ h1 {
   &__instagram {
     color: black;
   }
+}
+
+.nomal {
+  background-color: #fff;
+  transition: .5s;
+}
+.top {
+  background-color: red;
+  transition: .5s;
+}
+.about {
+  background-color: green;
+  transition: .5s;
+}
+.works {
+  background-color: blue;
+  transition: .5s;
+}
+.skills {
+  background-color: yellow;
+  transition: .5s;
+}
+.contact {
+  background-color: purple;
+  transition: .5s;
 }
 </style>
