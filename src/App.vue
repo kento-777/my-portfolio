@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  style="height: 100%;">
     <router-view></router-view>
   </div>
 </template>
@@ -8,4 +8,4 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>

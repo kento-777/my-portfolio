@@ -1,92 +1,60 @@
 <template>
-  <div>
-    <div
-      class="wrap"
-      :class="{
-        nomal: neverHover,
-        top: hoverTop,
-        about: hoverAbout,
-        works: hoverWorks,
-        skills: hoverSkills,
-        contact: hoverContact,
-      }"
-    >
-      <header><headerItem></headerItem></header>
-      <main>
-        <div class="main-wrap">
-          <div class="main__top-wrap">
-            <h1>Kento Tsuchida</h1>
-            <p>
-              This guy is a frontend enginner.<br />
-              This guy makes you happy through enginnering.
-            </p>
-          </div>
-          <div class="main__menu-wrap">
-            <ul>
-              <li>
-                <router-link id="top" to="/">
-                  <h2
-                    v-on:mouseover="overTop"
-                    v-on:mouseleave="mouseLeaveAction"
-                  >
-                    Top
-                  </h2>
-                </router-link>
-              </li>
-              <li>
-                <router-link id="about" to="/about">
-                  <h2
-                    v-on:mouseover="overAbout"
-                    v-on:mouseleave="mouseLeaveAction"
-                  >
-                    About
-                  </h2>
-                </router-link>
-              </li>
-              <li>
-                <router-link id="works" to="/works">
-                  <h2
-                    v-on:mouseover="overWorks"
-                    v-on:mouseleave="mouseLeaveAction"
-                  >
-                    Works
-                  </h2>
-                </router-link>
-              </li>
-              <li>
-                <router-link id="skills" to="/skills">
-                  <h2
-                    v-on:mouseover="overSkills"
-                    v-on:mouseleave="mouseLeaveAction"
-                  >
-                    Skills
-                  </h2>
-                </router-link>
-              </li>
-              <li>
-                <router-link id="contact" to="/contact">
-                  <h2
-                    v-on:mouseover="overContact"
-                    v-on:mouseleave="mouseLeaveAction"
-                  >
-                    Contact
-                  </h2>
-                </router-link>
-              </li>
-            </ul>
-          </div>
-          <div class="icon">
-            <a class="icon__twitter" href="#"
-              ><i class="fab fa-twitter-square fa-3x"></i
-            ></a>
-            <a class="icon__instagram" href="#"
-              ><i class="fab fa-instagram fa-3x"></i
-            ></a>
-          </div>
+  <div
+    class="wrap"
+    :class="{
+      nomal: neverHover,
+      about: hoverAbout,
+      works: hoverWorks,
+      skills: hoverSkills,
+    }"
+  >
+    <header><headerItem></headerItem></header>
+    <main>
+      <div class="main-wrap">
+        <div class="main__top-wrap">
+          <h1>Kento Tsuchida</h1>
+          <p>
+            This guy is a frontend enginner.<br />
+            This guy makes you happy through enginnering.
+          </p>
         </div>
-      </main>
-      <footer><footerItem></footerItem></footer>
-    </div>
+        <div class="main__menu-wrap">
+          <ul>
+            <li>
+              <router-link id="about" to="/about">
+                <h2
+                  v-on:mouseover="overAbout"
+                  v-on:mouseleave="mouseLeaveAction"
+                >
+                  About
+                </h2>
+              </router-link>
+            </li>
+            <li>
+              <router-link id="works" to="/works">
+                <h2
+                  v-on:mouseover="overWorks"
+                  v-on:mouseleave="mouseLeaveAction"
+                >
+                  Works
+                </h2>
+              </router-link>
+            </li>
+            <li>
+              <router-link id="skills" to="/skills">
+                <h2
+                  v-on:mouseover="overSkills"
+                  v-on:mouseleave="mouseLeaveAction"
+                >
+                  Skills
+                </h2>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer><footerItem></footerItem></footer>
   </div>
 </template>
 
@@ -95,25 +63,17 @@ export default {
   data() {
     return {
       neverHover: true,
-      hoverTop: false,
       hoverAbout: false,
       hoverWorks: false,
       hoverSkills: false,
-      hoverContact: false,
     };
   },
   methods: {
     reset() {
       this.neverHover = false;
-      this.hoverTop = false;
       this.hoverAbout = false;
       this.hoverWorks = false;
       this.hoverSkills = false;
-      this.hoverContact = false;
-    },
-    overTop() {
-      this.reset();
-      this.hoverTop = true;
     },
     overAbout() {
       this.reset();
@@ -127,10 +87,6 @@ export default {
       this.reset();
       this.hoverSkills = true;
     },
-    overContact() {
-      this.reset();
-      this.hoverContact = true;
-    },
     mouseLeaveAction() {
       this.reset();
       this.neverHover = true;
@@ -140,12 +96,20 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  height: 100%;
+  position: relative;
+}
 body {
   background-color: rgb(255, 255, 255);
+  height: 100%;
+  margin: 0;
+  
 }
 .wrap {
   padding: 0 30px;
   font-family: "Consolas";
+  height: 100%;
 }
 
 ul {
@@ -169,7 +133,7 @@ h1 {
       padding-top: 3rem;
       text-align: center;
       h1 {
-        font-size: 4rem;
+        font-size: 5rem;
       }
       p {
         font-size: 1.3rem;
@@ -182,8 +146,7 @@ h1 {
       padding: 50px 0 20px 0;
       h2 {
         margin: 0;
-        padding: 15px 0;
-        font-size: 5rem;
+        padding: 0.5em 0;
         display: inline-block;
         color: #ffffff;
         font-size: 36pt;
@@ -196,23 +159,11 @@ h1 {
   }
 }
 
-.icon {
-  display: flex;
-  &__twitter {
-    padding-right: 2em;
-    color: black;
-  }
-  &__instagram {
-    color: black;
-  }
+.footer {
+  bottom: 0;
 }
-
 .nomal {
   background-color: #fff;
-  transition: 0.3s;
-}
-.top {
-  background-color: red;
   transition: 0.3s;
 }
 .about {
@@ -227,8 +178,6 @@ h1 {
   background-color: yellow;
   transition: 0.3s;
 }
-.contact {
-  background-color: purple;
-  transition: 0.3s;
-}
+
+
 </style>

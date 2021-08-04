@@ -4,7 +4,6 @@ import Top from "../components/Top.vue";
 import Skills from "../components/Skills.vue";
 import About from "../components/About.vue";
 import Works from "../components/Works.vue";
-import Contact from "../components/Contact.vue";
 
 Vue.use(VueRouter);
 
@@ -24,10 +23,6 @@ const routes: Array<RouteConfig> = [
   {
     path: "/works",
     component: Works,
-  },
-  {
-    path: "/contact",
-    component: Contact,
   },
 ];
 

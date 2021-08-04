@@ -13,9 +13,6 @@
       <router-link id="skills" to="/skills">
         <span>Skills</span>
       </router-link>
-      <router-link id="contact" to="/contact">
-        <span>Contact</span>
-      </router-link>
     </slide>
     <div id="page-wrap"></div>
   </div>
