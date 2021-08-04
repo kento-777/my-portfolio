@@ -14,8 +14,8 @@
         <div class="main__top-wrap">
           <h1>Kento Tsuchida</h1>
           <p>
-            This guy is a frontend enginner.<br />
-            This guy makes you happy through enginnering.
+            <vue-typer  :text="text1" repeat=0></vue-typer> <br>
+            <vue-typer :text="text2" repeat=0 preTypeDelay=2000></vue-typer>
           </p>
         </div>
         <div class="main__menu-wrap">
@@ -62,10 +62,13 @@
 export default {
   data() {
     return {
+      text1: "This guy is a frontend enginner.",
+      text2: "This guy makes you happy through enginnering.",
       neverHover: true,
       hoverAbout: false,
       hoverWorks: false,
       hoverSkills: false,
+
     };
   },
   methods: {
@@ -104,7 +107,6 @@ body {
   background-color: rgb(255, 255, 255);
   height: 100%;
   margin: 0;
-  
 }
 .wrap {
   padding: 0 30px;
@@ -167,17 +169,15 @@ h1 {
   transition: 0.3s;
 }
 .about {
-  background-color: green;
+  background-color: rgb(195, 255, 200);
   transition: 0.3s;
 }
 .works {
-  background-color: blue;
+  background-color: rgb(180, 180, 255);
   transition: 0.3s;
 }
 .skills {
-  background-color: yellow;
+  background-color: rgb(255, 255, 190);
   transition: 0.3s;
 }
-
-
 </style>

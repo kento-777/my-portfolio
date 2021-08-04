@@ -4,7 +4,7 @@
       <header><headerItem></headerItem></header>
       <main>
         <div class="title"><h1>Skills</h1></div>
-        <div id="app" class="contents">
+        <div class="contents">
           <div v-for="item in items" :key="item.title" class="content">
             <div class="content__heading">
               <div class="content__logo">

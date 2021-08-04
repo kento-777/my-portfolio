@@ -6,6 +6,7 @@
         <div class="title"><h1>Works</h1></div>
         <div class="work">
           <div v-for="item in items" :key="item.id" class="work__item">
+            <h2 class="work__title">{{ item.title }}</h2>
             <img :src="item.src" :alt="item.alt" />
             <p class="work__explain">
               {{ item.explain1 }}<br />
@@ -25,6 +26,7 @@ export default {
     return {
       items: [
         {
+          title: "CLENZY MAPのブログ作成",
           id: 1,
           src: "Clenzymap-logo.png",
           alt: "a",
@@ -43,11 +45,15 @@ export default {
 
 <style lang="scss" scoped>
 .work {
-  box-shadow:  0 5px 10px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   &__item {
     img {
       width: 100%;
     }
+  }
+  &__title {
+    margin: 0;
+    padding-top: 20px;
   }
   &__explain {
     font-size: 1.3em;
