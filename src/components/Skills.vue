@@ -196,6 +196,9 @@ dl {
   }
 }
 
+.fade {
+  animation: fadeIn 2s ease 2.5s normal;
+}
 @media screen and (max-width: 680px){
   dl {
     display: block;

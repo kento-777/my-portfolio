@@ -186,7 +186,7 @@ dl {
   font-weight: bold;
 }
 .fade {
-  animation: fadeIn 2s ease 0.1s normal;
+  animation: fadeIn 2s ease 2.5s normal;
 }
 @media screen and (max-width: 680px) {
   .profile {
