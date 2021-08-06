@@ -1,10 +1,12 @@
+
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import headerItem from "./components/parts/headerItem.vue";
 import footerItem from "./components/parts/footerItem.vue";
-import  Slide  from "vue-burger-menu";
-import  VueTyper  from "vue-typer";
+import  {Slide}  from "vue-burger-menu";
+import  {VueTyper}  from "vue-typer";
+
 
 Vue.config.productionTip = false;
 Vue.component("headerItem", headerItem);
