@@ -6,7 +6,7 @@
         href="https://twitter.com/home?utm_source=homescreen&utm_medium=shortcut"
         ><i class="fab fa-twitter-square fa-3x"></i
       ></a>
-      <a class="icon__instagram" href="#"
+      <a class="icon__instagram" href="https://www.instagram.com/tuchiken_777/"
         ><i class="fab fa-instagram fa-3x"></i
       ></a>
       <a class="icon__mail" href="mailto:kentuuuwork@gmail.com"

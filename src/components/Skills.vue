@@ -32,7 +32,7 @@
                 </div>
               </div>
             </dt>
-            <dd class="content__explain">
+            <dd class="content__explain fade">
               <p>
                 {{ item.explain }}
               </p>
