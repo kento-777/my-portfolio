@@ -12,10 +12,10 @@
     <main>
       <div class="main-wrap">
         <div class="main__top-wrap">
-          <h1>Kento Tsuchida</h1>
+          <h1 class="fade">Kento Tsuchida</h1>
           <p>
-            <vue-typer  :text="text1" repeat=0></vue-typer> <br>
-            <vue-typer :text="text2" repeat=0 preTypeDelay=2000></vue-typer>
+            <vue-typer :text="text1" :repeat="0"></vue-typer> <br />
+            <vue-typer :text="text2" :repeat="0" :preTypeDelay="2000"></vue-typer>
           </p>
         </div>
         <div class="main__menu-wrap">
@@ -23,8 +23,10 @@
             <li>
               <router-link id="about" to="/about">
                 <h2
+                  class="link__about"
                   v-on:mouseover="overAbout"
                   v-on:mouseleave="mouseLeaveAction"
+                  ontouchstart=""
                 >
                   About
                 </h2>
@@ -33,8 +35,10 @@
             <li>
               <router-link id="works" to="/works">
                 <h2
+                  class="link__works"
                   v-on:mouseover="overWorks"
                   v-on:mouseleave="mouseLeaveAction"
+                  ontouchstart=""
                 >
                   Works
                 </h2>
@@ -43,8 +47,10 @@
             <li>
               <router-link id="skills" to="/skills">
                 <h2
+                  class="link__skills"
                   v-on:mouseover="overSkills"
                   v-on:mouseleave="mouseLeaveAction"
+                  ontouchstart=""
                 >
                   Skills
                 </h2>
@@ -68,7 +74,6 @@ export default {
       hoverAbout: false,
       hoverWorks: false,
       hoverSkills: false,
-
     };
   },
   methods: {
@@ -113,7 +118,6 @@ body {
   font-family: "Consolas";
   height: 100%;
 }
-
 ul {
   padding-left: 0;
 }
@@ -125,6 +129,14 @@ a {
 }
 h1 {
   font-size: 50px;
+}
+
+.fade {
+  animation: fadeIn 2s ease 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
 }
 </style>
 
@@ -145,7 +157,7 @@ h1 {
   }
   &__menu {
     &-wrap {
-      padding: 50px 0 20px 0;
+      padding: 50px 0 20px 30px;
       h2 {
         margin: 0;
         padding: 0.5em 0;
@@ -156,28 +168,66 @@ h1 {
         text-shadow: 2px 2px 1px #000000, -2px 2px 1px #000000,
           2px -2px 1px #000000, -2px -2px 1px #000000, 2px 0px 1px #000000,
           0px 2px 1px #000000, -2px 0px 1px #000000, 0px -2px 1px #000000;
+        transition: transform 0.4s;
+        &:hover {
+          transform: translateX(50px);
+        }
       }
     }
   }
 }
-
 .footer {
   bottom: 0;
 }
+
 .nomal {
-  background-color: #fff;
-  transition: 0.3s;
+  h2 {
+    color: #fff;
+    transition: 0.3s;
+  }
 }
 .about {
-  background-color: rgb(195, 255, 200);
-  transition: 0.3s;
+  .link {
+    &__about {
+      color: rgb(0, 255, 21);
+      transition: 0.3s;
+    }
+  }
 }
 .works {
-  background-color: rgb(180, 180, 255);
-  transition: 0.3s;
+  .link {
+    &__works {
+      color: rgb(255, 255, 0);
+      transition: 0.3s;
+    }
+  }
 }
 .skills {
-  background-color: rgb(255, 255, 190);
-  transition: 0.3s;
+  .link {
+    &__skills {
+      color: rgb(0, 204, 255);
+      transition: 0.3s;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) { 
+  .main {
+    &__top {
+      &-wrap {
+        h1 {
+          font-size: 60px;
+        }
+        p {
+          font-size:16px;
+        }
+      }
+    }
+    &__menu {
+      &-wrap {
+        padding: 0 0 40px 0;
+      }
+    }
+  }
 }
 </style>

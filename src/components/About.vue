@@ -3,39 +3,39 @@
     <div class="wrap">
       <header><headerItem></headerItem></header>
       <main>
-        <div class="title"><h1>About</h1></div>
+        <div class="title fade"><h1>About</h1></div>
         <div class="profile">
           <div class="profile__img">
-            <img src="IMG_2875.JPG" alt="my-image" />
+            <img class="fade" src="IMG_2875.JPG" alt="my-image" />
           </div>
           <div class="profile__explain">
             <p>
-              <vue-typer :text="explainText1" repeat="0"></vue-typer>
+              <vue-typer :text="explainText1" :repeat="0"></vue-typer>
               <br /><br />
-              <vue-typer :text="explainText2" repeat="0"></vue-typer>
+              <vue-typer :text="explainText2" :repeat="0"></vue-typer>
               <br /><br />
-              <vue-typer :text="explainText3" repeat="0"></vue-typer> <br />
-              <vue-typer :text="explainText4" repeat="0"></vue-typer> <br />
-              <vue-typer :text="explainText5" repeat="0"></vue-typer> <br />
+              <vue-typer :text="explainText3" :repeat="0"></vue-typer> <br />
+              <vue-typer :text="explainText4" :repeat="0"></vue-typer> <br />
+              <vue-typer :text="explainText5" :repeat="0"></vue-typer> <br />
             </p>
           </div>
         </div>
         <div class="story-wrap">
-          <div class="title"><h2>My Story</h2></div>
+          <div class="sub-title"><h2>My Story</h2></div>
           <dl v-for="item in items" :key="item.id" class="content">
             <dt>{{ item.year }}</dt>
             <dd>
               <h3 :class="{ bold: item.isActive }">
                 <vue-typer
                   :text="item.title"
-                  repeat="0"
+                  :repeat="0"
                   :preTypeDelay="item.delay"
                 ></vue-typer>
               </h3>
               <p>
                 <vue-typer
                   :text="item.explain"
-                  repeat="0"
+                  :repeat="0"
                   :preTypeDelay="item.delay"
                 ></vue-typer>
               </p>
@@ -47,6 +47,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -137,7 +138,6 @@ h3 {
   &__img {
     width: 50%;
     text-align: center;
-
     img {
       width: 50%;
       border-radius: 50%;
@@ -169,7 +169,7 @@ dl {
       right: -1.63em;
       top: 2px;
       font-size: 30px;
-      color: black;
+      color: rgb(0, 255, 21);
     }
   }
   dd {
@@ -184,5 +184,23 @@ dl {
 }
 .bold {
   font-weight: bold;
+}
+.fade {
+  animation: fadeIn 2s ease 0.1s normal;
+}
+@media screen and (max-width: 680px) {
+  .profile {
+    &__img {
+      img {
+        width: 80%;
+      }
+    }
+    &__explain {
+        font-size: 10px;
+    }
+  }
+  dt {
+    padding-right: 15px;
+  }
 }
 </style>

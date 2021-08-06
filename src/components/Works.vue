@@ -3,11 +3,11 @@
     <div class="wrap">
       <header><headerItem></headerItem></header>
       <main>
-        <div class="title"><h1>Works</h1></div>
+        <div class="title fade"><h1>Works</h1></div>
         <div class="work">
           <div v-for="item in items" :key="item.id" class="work__item">
             <h2 class="work__title">{{ item.title }}</h2>
-            <img :src="item.src" :alt="item.alt" />
+            <div class="work__img"><img class="fade" :src="item.src" :alt="item.alt" /></div>
             <p class="work__explain">
               {{ item.explain1 }}<br />
               {{ item.explain2 }}
@@ -31,9 +31,9 @@ export default {
           src: "Clenzymap-logo.png",
           alt: "a",
           explain1:
-            "WordPlessを用いて、SANGOを基礎とした独自テーマを制作し、自分のチームのオリジナルブログサイトを完成させました。",
+            "　WordPlessを用いて、SANGOを基礎とした独自テーマを制作し、自分のチームのオリジナルブログサイトを完成させました。",
           explain2:
-            "知識０からでもストレスなく学べるロードマップを随時更新しています。ただロードマップを提示するだけでなく、「ともにロードマップを走ってあげる」ことをモットーとして運営しています。",
+            "　知識０からでもストレスなく学べるロードマップを随時更新しています。ただロードマップを提示するだけでなく、「ともにロードマップを走ってあげる」ことをモットーとして運営しています。",
           href: "https://clenzymap.clenzy.net/",
           urlTitle: "CLENZY MAP | あなたと旅するITメディア",
         },
@@ -46,14 +46,16 @@ export default {
 <style lang="scss" scoped>
 .work {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-  &__item {
+  &__img {
+    height: 450px;
+    overflow: hidden;
     img {
       width: 100%;
     }
   }
   &__title {
     margin: 0;
-    padding-top: 20px;
+    padding: 20px;
   }
   &__explain {
     font-size: 1.3em;
@@ -63,6 +65,25 @@ export default {
   &__url {
     font-size: 1.3em;
     padding: 0 1.5em;
+  }
+}
+
+@media screen and (max-width: 680px){
+  .work {
+    &__title {
+      font-size: 20px;
+    }
+    &__img {
+      height: auto;
+    }
+    &__explain {
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+    &__url {
+      font-size: .8em;
+      margin-bottom: 10px;
+    }
   }
 }
 </style>
