@@ -22,9 +22,8 @@
   width: 95%;
   display: flex;
   justify-content: space-between;
-  padding: 60px 0 10px 0;
+  padding: 20px 0 10px 0;
   align-items: flex-end;
-  position: absolute;
 
   .icon {
     &__twitter {
@@ -59,7 +58,6 @@
     &__right {
       padding-top: 10px;
       text-align-last: left;
-      font-size: 2px;
     }
   }
 }
