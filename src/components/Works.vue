@@ -31,7 +31,7 @@ export default {
           src: "Clenzymap-logo.png",
           alt: "a",
           explain1:
-            "　WordPlessを用いて、SANGOを基礎とした独自テーマを制作し、自分のチームのオリジナルブログサイトを完成させました。",
+            "　WordPressを用いて、SANGOを基礎とした独自テーマを制作し、自分のチームのオリジナルブログサイトを完成させました。",
           explain2:
             "　知識０からでもストレスなく学べるロードマップを随時更新しています。ただロードマップを提示するだけでなく、「ともにロードマップを走ってあげる」ことをモットーとして運営しています。",
           href: "https://clenzymap.clenzy.net/",
