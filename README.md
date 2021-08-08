@@ -42,6 +42,9 @@ URL:<https://tsuchiken.netlify.app/skills>
 * vue/cli 4.5.13
 * node 14.17.2
 * yarn 1.22.10
+### 使用したコンポーネントライブラリ
+* mbj36/vue-burger-menu  URL:<https://github.com/mbj36/vue-burger-menu>
+* cngu/vue-typer URL:<https://github.com/cngu/vue-typer?ref=kabanoki.net>
 
 ### Project setup
 ```
