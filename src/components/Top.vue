@@ -15,44 +15,24 @@
           <h1 class="fade">Kento Tsuchida</h1>
           <p>
             <vue-typer :text="text1" :repeat="0"></vue-typer> <br />
-            <vue-typer :text="text2" :repeat="0" :preTypeDelay="2000"></vue-typer>
+            <vue-typer
+              :text="text2"
+              :repeat="0"
+              :preTypeDelay="2000"
+            ></vue-typer>
           </p>
         </div>
         <div class="main__menu-wrap">
           <ul>
-            <li>
-              <router-link id="about" to="/about">
+            <li v-for="item in items" :key="item.title">
+              <router-link :id="item.title" :to="item.to">
                 <h2
-                  class="link__about"
-                  v-on:mouseover="overAbout"
+                  :class="item.class"
+                  v-on:mouseover="item.mouseover"
                   v-on:mouseleave="mouseLeaveAction"
                   ontouchstart=""
                 >
-                  About
-                </h2>
-              </router-link>
-            </li>
-            <li>
-              <router-link id="works" to="/works">
-                <h2
-                  class="link__works"
-                  v-on:mouseover="overWorks"
-                  v-on:mouseleave="mouseLeaveAction"
-                  ontouchstart=""
-                >
-                  Works
-                </h2>
-              </router-link>
-            </li>
-            <li>
-              <router-link id="skills" to="/skills">
-                <h2
-                  class="link__skills"
-                  v-on:mouseover="overSkills"
-                  v-on:mouseleave="mouseLeaveAction"
-                  ontouchstart=""
-                >
-                  Skills
+                  {{ item.title }}
                 </h2>
               </router-link>
             </li>
@@ -74,6 +54,26 @@ export default {
       hoverAbout: false,
       hoverWorks: false,
       hoverSkills: false,
+      items: [
+        {
+          title: "about",
+          to: "/about",
+          class: "link__about",
+          mouseover: "overAbout",
+        },
+        {
+          title: "works",
+          to: "/works",
+          class: "link__works",
+          mouseover: "overWorks",
+        },
+        {
+          title: "skills",
+          to: "/skills",
+          class: "link__skills",
+          mouseover: "overSkills",
+        },
+      ],
     };
   },
   methods: {
@@ -135,8 +135,12 @@ h1 {
   animation: fadeIn 2s ease 1 normal;
 }
 @keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
 
@@ -211,7 +215,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 680px) { 
+@media screen and (max-width: 680px) {
   .main {
     &__top {
       &-wrap {
@@ -219,7 +223,7 @@ h1 {
           font-size: 60px;
         }
         p {
-          font-size:16px;
+          font-size: 16px;
         }
       }
     }
