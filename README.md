@@ -1,5 +1,4 @@
 # My-portfolioSite
-<img width="947" alt="スクリーンショット 2021-08-09 165229" src="https://user-images.githubusercontent.com/84276667/128674833-6e1feb17-a984-42b0-b0ae-fc24209cf9b4.png">
 Vueをメインとしたポートフォリオサイトを作成しました。
 
 ページはすべてSPA化されており、スムーズなページ遷移を可能としています。
