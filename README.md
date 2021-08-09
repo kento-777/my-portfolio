@@ -17,18 +17,21 @@ TOP画面も含め、サイト全体をシンプルに仕上げました。
 
 
 ### About
+<img width="947" alt="About" src="https://user-images.githubusercontent.com/84276667/128677002-6775a308-04ce-41c9-9793-cd2780e4e205.png">
 Aboutページは自己紹介ページとなっています。
 
 Vueのv-forディレクティブを用いて、繰り返しとなっている箇所を省略し、
 中身のデータを動的なものにしました！
 
-### Work
+### Works
+<img width="947" alt="Works" src="https://user-images.githubusercontent.com/84276667/128677040-1f606dd0-71ed-4ed0-a2cb-d313a71cbb45.png">
 これまでの実績をこのページにまとめました。
 
 実績をカード化し、それを追加していく構造となるよう設計しました。
 
 
 ### Skills
+<img width="947" alt="Skills" src="https://user-images.githubusercontent.com/84276667/128677050-4ec3b32b-3f56-4680-88c1-376ce98560b6.png">
 現段階でできることについて、このページにまとめました。
 
 棒グラフを用いてそれぞれの言語などの修得度を可視化し、コメントでそれを補う形をとることで
