@@ -14,9 +14,9 @@
         <div class="main__top-wrap">
           <h1 class="fade">Kento Tsuchida</h1>
           <p>
-            <vue-typer :text="text1" :repeat="0"></vue-typer> <br />
+            <vue-typer :text=text1 :repeat="0"></vue-typer> <br />
             <vue-typer
-              :text="text2"
+              :text=text2
               :repeat="0"
               :preTypeDelay="2000"
             ></vue-typer>
@@ -24,12 +24,12 @@
         </div>
         <div class="main__menu-wrap">
           <ul>
-            <li v-for="item in items" :key="item.title">
+            <li v-for="item in topItems" :key="item.title">
               <router-link :id="item.title" :to="item.to">
                 <h2
                   :class="item.class"
-                  v-on:mouseover="item.mouseover"
-                  v-on:mouseleave="mouseLeaveAction"
+                  v-on::mouseover="item.mouseover"
+                  v-on::mouseleave="mouseLeaveAction"
                   ontouchstart=""
                 >
                   {{ item.title }}
@@ -45,60 +45,38 @@
 </template>
 
 <script>
+import {
+  text1,
+  text2,
+  neverHover,
+  hoverAbout,
+  hoverWorks,
+  hoverSkills,
+  topItems,
+  reset,
+  overAbout,
+  overWorks,
+  overSkills,
+  mouseLeaveAction,
+} from "../assets/data.ts";
 export default {
   data() {
     return {
-      text1: "This guy is a frontend enginner.",
-      text2: "This guy makes you happy through enginnering.",
-      neverHover: true,
-      hoverAbout: false,
-      hoverWorks: false,
-      hoverSkills: false,
-      items: [
-        {
-          title: "about",
-          to: "/about",
-          class: "link__about",
-          mouseover: "overAbout",
-        },
-        {
-          title: "works",
-          to: "/works",
-          class: "link__works",
-          mouseover: "overWorks",
-        },
-        {
-          title: "skills",
-          to: "/skills",
-          class: "link__skills",
-          mouseover: "overSkills",
-        },
-      ],
+      text1,
+      text2,
+      neverHover,
+      hoverAbout,
+      hoverWorks,
+      hoverSkills,
+      topItems,
     };
   },
   methods: {
-    reset() {
-      this.neverHover = false;
-      this.hoverAbout = false;
-      this.hoverWorks = false;
-      this.hoverSkills = false;
-    },
-    overAbout() {
-      this.reset();
-      this.hoverAbout = true;
-    },
-    overWorks() {
-      this.reset();
-      this.hoverWorks = true;
-    },
-    overSkills() {
-      this.reset();
-      this.hoverSkills = true;
-    },
-    mouseLeaveAction() {
-      this.reset();
-      this.neverHover = true;
-    },
+    reset,
+    overAbout,
+    overWorks,
+    overSkills,
+    mouseLeaveAction
   },
 };
 </script>
