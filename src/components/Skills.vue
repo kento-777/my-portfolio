@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="wrap">
-      <header><headerItem></headerItem></header>
+      <headerItem></headerItem>
       <main>
         <div class="title fade"><h1>Skills</h1></div>
         <div class="contents">
@@ -40,14 +40,15 @@
           </dl>
         </div>
       </main>
-      <footer><footerItem></footerItem></footer>
+      <footerItem></footerItem>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { SkillDataType } from "../assets/data";
 export default {
-  data() {
+  data(): SkillDataType {
     return {
       items: [
         {

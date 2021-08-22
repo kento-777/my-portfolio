@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <footer>
     <div class="icon">
       <a
         class="icon__twitter"
@@ -14,11 +14,11 @@
       ></a>
     </div>
     <p class="footer__right">©　Kento Tsuchida. 2021.</p>
-  </div>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
-.footer {
+footer {
   width: 95%;
   display: flex;
   justify-content: space-between;

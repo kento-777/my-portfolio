@@ -8,7 +8,7 @@
       skills: hoverSkills,
     }"
   >
-    <header><headerItem></headerItem></header>
+    <headerItem></headerItem>
     <main>
       <div class="main-wrap">
         <div class="main__top-wrap">
@@ -40,13 +40,14 @@
         </div>
       </div>
     </main>
-    <footer><footerItem></footerItem></footer>
+    <footerItem></footerItem>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { TopDataType } from "../assets/data";
 export default {
-  data() {
+  data(): TopDataType {
     return {
       text1: "This guy is a frontend engineer.",
       text2: "This guy makes you happy through engineering.",
@@ -59,44 +60,59 @@ export default {
           id: "about",
           to: "/about",
           class: "link__about",
+          //@ts-ignore 
           mouseover: this.overAbout,
         },
         {
           id: "works",
           to: "/works",
           class: "link__works",
+          //@ts-ignore
           mouseover: this.overWorks,
         },
         {
           id: "skills",
           to: "/skills",
           class: "link__skills",
+          //@ts-ignore
           mouseover: this.overSkills,
         },
       ],
     };
   },
   methods: {
-    reset() {
+    reset(): void {
+      //@ts-ignore
       this.neverHover = false;
+      //@ts-ignore
       this.hoverAbout = false;
+      //@ts-ignore
       this.hoverWorks = false;
+      //@ts-ignore
       this.hoverSkills = false;
     },
-    overAbout() {
+    overAbout(): void {
+      //@ts-ignore
       this.reset();
+      //@ts-ignore
       this.hoverAbout = true;
     },
-    overWorks() {
+    overWorks(): void {
+      //@ts-ignore
       this.reset();
+      //@ts-ignore
       this.hoverWorks = true;
     },
-    overSkills() {
+    overSkills(): void {
+      //@ts-ignore
       this.reset();
+      //@ts-ignore
       this.hoverSkills = true;
     },
-    mouseLeaveAction() {
+    mouseLeaveAction(): void {
+      //@ts-ignore
       this.reset();
+      //@ts-ignore
       this.neverHover = true;
     },
   },
