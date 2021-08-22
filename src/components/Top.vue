@@ -28,7 +28,7 @@
               <router-link :id="item.id" :to="item.to">
                 <h2
                   :class="item.class"
-                  :v-on:mouseover="item.overAbout"
+                  v-on:mouseover="item.mouseover()"
                   v-on:mouseleave="mouseLeaveAction"
                   ontouchstart=""
                 >
@@ -59,19 +59,19 @@ export default {
           id: "about",
           to: "/about",
           class: "link__about",
-          mouseover: this.overAbout(),
+          mouseover: this.overAbout,
         },
         {
           id: "works",
           to: "/works",
           class: "link__works",
-          mouseover: this.overWorks(),
+          mouseover: this.overWorks,
         },
         {
           id: "skills",
           to: "/skills",
           class: "link__skills",
-          mouseover: this.overSkills(),
+          mouseover: this.overSkills,
         },
       ],
     };
