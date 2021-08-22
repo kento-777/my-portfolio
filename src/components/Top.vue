@@ -8,7 +8,7 @@
       skills: hoverSkills,
     }"
   >
-    <headerItem></headerItem>
+    <header><headerItem></headerItem></header>
     <main>
       <div class="main-wrap">
         <div class="main__top-wrap">

@@ -54,5 +54,5 @@ type workItems = {
   urlTitle: string;
 };
 export type WorkDataType = {
-  items: Array<workItems>
-}
+  items: Array<workItems>;
+};
