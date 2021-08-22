@@ -14,9 +14,9 @@
         <div class="main__top-wrap">
           <h1 class="fade">Kento Tsuchida</h1>
           <p>
-            <vue-typer :text=text1 :repeat="0"></vue-typer> <br />
+            <vue-typer :text="text1" :repeat="0"></vue-typer> <br />
             <vue-typer
-              :text=text2
+              :text="text2"
               :repeat="0"
               :preTypeDelay="2000"
             ></vue-typer>
@@ -45,38 +45,64 @@
 </template>
 
 <script>
-import {
-  text1,
-  text2,
-  neverHover,
-  hoverAbout,
-  hoverWorks,
-  hoverSkills,
-  topItems,
-  reset,
-  overAbout,
-  overWorks,
-  overSkills,
-  mouseLeaveAction,
-} from "../assets/data.ts";
 export default {
-  data() {
+  data(){
+    text1: string,
+    text2: string
+  } {
     return {
-      text1,
-      text2,
-      neverHover,
-      hoverAbout,
-      hoverWorks,
-      hoverSkills,
-      topItems,
+      text1:"This guy is a frontend engineer.",
+      text2:"This guy makes you happy through engineering.",
+      neverHover: true,
+      hoverAbout: false,
+      hoverWorks: false,
+      hoverSkills: false,
+      topItems:[
+        {
+          title: "about",
+          to: "/about",
+          class: "link__about",
+          mouseover: "overAbout",
+        },
+        {
+          title: "works",
+          to: "/works",
+          class: "link__works",
+          mouseover: "overWorks",
+        },
+        {
+          title: "skills",
+          to: "/skills",
+          class: "link__skills",
+          mouseover: "overSkills",
+        },
+      ],
     };
+  }
   },
   methods: {
-    reset,
-    overAbout,
-    overWorks,
-    overSkills,
-    mouseLeaveAction
+    reset() {
+      neverHover = false;
+      hoverAbout = false;
+      hoverWorks = false;
+      hoverSkills = false;
+    },
+    overAbout() {
+      reset();
+      hoverAbout = true;
+    },
+    overWorks() {
+      reset();
+      hoverWorks = true;
+    },
+    overSkills() {
+      reset();
+      hoverSkills = true;
+    },
+    mouseLeaveAction() {
+      reset();
+      neverHover = true;
+    },
   },
 };
 </script>
