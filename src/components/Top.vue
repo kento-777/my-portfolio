@@ -14,11 +14,11 @@
         <div class="main__top-wrap">
           <h1 class="fade">Kento Tsuchida</h1>
           <p>
-            <vue-typer :text= "text1" repeat="0"></vue-typer> <br />
+            <vue-typer :text= "text1" :repeat = '0'></vue-typer> <br />
             <vue-typer
               :text= "text2"
-              repeat= "0"
-              preTypeDelay= "2000"
+              :repeat= '0'
+              :preTypeDelay= '2000'
             ></vue-typer>
           </p>
         </div>
@@ -59,19 +59,19 @@ export default {
           id: "about",
           to: "/about",
           class: "link__about",
-          mouseover: "overAbout",
+          mouseover: this.overAbout(),
         },
         {
           id: "works",
           to: "/works",
           class: "link__works",
-          mouseover: "overWorks",
+          mouseover: this.overWorks(),
         },
         {
           id: "skills",
           to: "/skills",
           class: "link__skills",
-          mouseover: "overSkills",
+          mouseover: this.overSkills(),
         },
       ],
     };
