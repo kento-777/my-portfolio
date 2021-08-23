@@ -23,7 +23,7 @@
   </div>
 </template>
 <script lang="ts">
-import { WorkDataType } from "../assets/data";
+import { WorkDataType } from "../../types/data";
 export default {
   data(): WorkDataType {
     return {
