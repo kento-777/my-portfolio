@@ -1,13 +1,15 @@
 <template>
   <div>
     <div class="wrap">
-      <header><headerItem></headerItem></header>
+      <headerItem></headerItem>
       <main>
         <div class="title fade"><h1>Works</h1></div>
         <div class="work">
           <div v-for="item in items" :key="item.id" class="work__item">
             <h2 class="work__title">{{ item.title }}</h2>
-            <div class="work__img"><img class="fade" :src="item.src" :alt="item.alt" /></div>
+            <div class="work__img">
+              <img class="fade" :src="item.src" :alt="item.alt" />
+            </div>
             <p class="work__explain">
               {{ item.explain1 }}<br />
               {{ item.explain2 }}
@@ -16,20 +18,21 @@
           </div>
         </div>
       </main>
-      <footer><footerItem></footerItem></footer>
+      <footerItem></footerItem>
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
+import { WorkDataType } from "../types/data";
 export default {
-  data() {
+  data(): WorkDataType {
     return {
       items: [
         {
           title: "CLENZY MAPのブログ作成",
           id: 1,
           src: "Clenzymap-logo.png",
-          alt: "a",
+          alt: "Clenzymap",
           explain1:
             "　WordPressを用いて、SANGOを基礎とした独自テーマを制作し、自分のチームのオリジナルブログサイトを完成させました。",
           explain2:
@@ -68,7 +71,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 680px) {
   .work {
     &__title {
       font-size: 20px;
@@ -81,7 +84,7 @@ export default {
       margin-bottom: 0;
     }
     &__url {
-      font-size: .8em;
+      font-size: 0.8em;
       margin-bottom: 10px;
     }
   }

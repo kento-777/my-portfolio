@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="wrap">
-      <header><headerItem></headerItem></header>
+      <headerItem></headerItem>
       <main>
         <div class="title fade"><h1>About</h1></div>
         <div class="profile">
@@ -43,14 +43,15 @@
           </dl>
         </div>
       </main>
-      <footer><footerItem></footerItem></footer>
+      <footerItem></footerItem>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { AboutDataType } from "../types/data";
 export default {
-  data() {
+  data(): AboutDataType {
     return {
       explainText1: "土田健斗　Kento Tsuchida(21)",
       explainText2: "フロントエンドエンジニア",
@@ -196,7 +197,7 @@ dl {
       }
     }
     &__explain {
-        font-size: 10px;
+      font-size: 10px;
     }
   }
   dt {
