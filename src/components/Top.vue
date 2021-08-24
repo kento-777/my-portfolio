@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts">
-import { TopDataType } from "../../types/data";
+import { TopDataType } from "../types/data";
 export default {
   data(): TopDataType {
     return {

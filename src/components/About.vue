@@ -49,7 +49,7 @@
 </template>
 
 <script lang="ts">
-import { AboutDataType } from "../../types/data";
+import { AboutDataType } from "../types/data";
 export default {
   data(): AboutDataType {
     return {

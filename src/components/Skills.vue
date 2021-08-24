@@ -46,7 +46,7 @@
 </template>
 
 <script lang="ts">
-import { SkillDataType } from "../../types/data";
+import { SkillDataType } from "../types/data";
 export default {
   data(): SkillDataType {
     return {
